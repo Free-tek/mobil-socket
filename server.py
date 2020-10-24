@@ -1,5 +1,8 @@
 import socket
 import sys
+from datetime import datetime
+
+#fuser -k 9999/tcp
 
 def create_socket():
 	try:
@@ -35,12 +38,24 @@ def bind_socket():
 def socket_accept():
 	connection, address = s.accept()
 	print(f"Connection established from IP: {address[0]} and port {address[1]}")
-	recieve_data(connection)
+	recieve_data(connection, address)
 	#send_command(connection)
 	#connection.close()
 
-def recieve_data(connection):
+def recieve_data(connection, address):
 	client_response = str(connection.recv(1024),"utf-8")
+
+	now = datetime.now()
+	current_time = now.strftime("%Y-%m-%d %H:%M:%S")
+
+	f = open("streams.txt", "a")
+	f.write(f"Time: {current_time} \n")
+	f.write(f"Connection established from IP: {address[0]} and port: {address[1]} \n")
+	f.write(f"Message: {client_response} \n")
+	f.write(f"\n")
+	f.close()
+
+
 	print(f"{client_response}")
 	connection.close()
 	socket_accept()

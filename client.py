@@ -9,7 +9,7 @@ port = 9999
 #host = '172.20.10.4'
 
 s.connect((host, port))
-s.send(str.encode("wake up dude change 2s"))
+s.send(str.encode("comming from tunde"))
 
 '''
 while True:

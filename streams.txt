@@ -1,0 +1,16 @@
+Time: 2020-10-24 13:03:08 
+Connection established from IP: 172.20.10.4 and Port: 61967 
+Message: wake up dude change 2s 
+
+Time: 2020-10-24 13:03:13 
+Connection established from IP: 172.20.10.4 and Port: 61969 
+Message: wake up dude change 2s 
+
+Time: 2020-10-24 13:03:13 
+Connection established from IP: 172.20.10.4 and Port: 61970 
+Message: wake up dude change 2s 
+
+Time: 2020-10-24 13:03:26 
+Connection established from IP: 172.20.10.4 and Port: 61974 
+Message: check file now 
+
